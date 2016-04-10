@@ -1,16 +1,14 @@
 $(document).ready(function() {
 
-document.learnMore('learnMore');
-document.readmore('readMore');
-document.readless('readLess');
-document.buttonBlue('buttonBlue');
-
+$('.learnmore').click(learnMore);
 
 function learnMore() {
 
-        $('.learnmore').slideDown();
-    	$('.learnmore').hide();
+        $('#learnmoretext').slideToggle();
+    	$('#show-this-on-click').hide();
 }
+
+
 
 function readMore() {
 
