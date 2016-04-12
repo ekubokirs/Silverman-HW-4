@@ -1,31 +1,37 @@
 $(document).ready(function() {
 
-$('.learnmore').click(learnMore);
+function learnMore(event) {
 
-function learnMore() {
-
-        $('#learnmoretext').slideToggle();
-    	$('#show-this-on-click').hide();
+	event.preventDefault();
+	$('.learnmore').hide();
+	$('#learnmoretext').slideDown();
 }
 
+$('.learnmore').click(learnMore);
 
 
 function readMore() {
-
-	$('.readmore').show();
+	
+	event.preventDefault();
+	$('#show-this-on-click').slideDown();
+	$('.readless').show();
 	$('.readmore').hide();
 }
-    
+
+$('.readmore').click(readMore);
+
+
 function readLess() {
 
-	$('.readless, .hide').slideDown();
-	$('.readless, .hide').show();
-
+	event.preventDefault();
+	$('#show-this-on-click').slideUp();
+	$('.readless').hide();
+	$('.readmore').show();
 }
 
-function buttonBlue() {}
-
-	$('.button, .blue').event.preventDefault();
-}
+$('.readless').click(readLess);
+     // $('#learnmoretext').hide();
+    	// $('#show-this-on-click').slideDown();
+    	
 
 }); 
